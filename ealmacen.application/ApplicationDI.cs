@@ -1,5 +1,4 @@
 ﻿using FluentValidation;
-using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
@@ -12,8 +11,6 @@ public static class ApplicationDI
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
         services.AddMediatR(optionCfg => optionCfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
-
-        services.AddSingleton<IMediator, Mediator>();
 
         AssemblyScanner.FindValidatorsInAssembly(Assembly.GetExecutingAssembly())
                 .ForEach(item => services.AddScoped(item.InterfaceType, item.ValidatorType));

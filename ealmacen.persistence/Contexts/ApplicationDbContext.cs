@@ -1,10 +1,10 @@
 ﻿using eAlmacen.Domain.Entities;
-using eAlmacen.persistence.Interfaces;
+using eAlmacen.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace eAlmacen.persistence.Contexts;
 
-public class ApplicationDbContext(DbContextOptions options) : DbContext(options), IApplicationDbContext
+public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : DbContext(options), IApplicationDbContext
 {
     public virtual DbSet<Product> Products { get; set; }
 

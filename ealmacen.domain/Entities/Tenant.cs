@@ -1,8 +1,6 @@
 ﻿namespace eAlmacen.Domain.Entities;
 
-public class Organization : EntityBase
+public class Tenant
 {
-    public string Name { get; set; }
-
     public string SlugTenant { get; set; }
 }

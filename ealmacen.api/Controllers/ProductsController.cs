@@ -2,12 +2,15 @@
 using eAlmacen.Application.Products.Queries;
 using eAlmacen.Application.Products.Responses;
 using MediatR;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eAlmacen.api.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+[Route("{SlugTenant}/[controller]")]
 public class ProductsController(IMediator mediator)
 {
     [HttpGet()]

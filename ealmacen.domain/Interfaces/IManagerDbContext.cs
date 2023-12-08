@@ -1,7 +1,7 @@
 ﻿using eAlmacen.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace ealmacen.persistence.Interfaces;
+namespace eAlmacen.Domain.Interfaces;
 
 public interface IManagerDbContext
 {

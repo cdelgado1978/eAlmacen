@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using eAlmacen.Domain.Entities;
-using eAlmacen.persistence.Interfaces;
+using eAlmacen.Domain.Interfaces;
 using MediatR;
 
 namespace eAlmacen.Application.Products.Commands;

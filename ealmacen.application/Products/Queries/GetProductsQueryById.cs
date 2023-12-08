@@ -2,7 +2,7 @@
 using eAlmacen.Application.Products.Responses;
 using eAlmacen.Domain.Entities;
 using eAlmacen.Domain.Exceptions;
-using eAlmacen.persistence.Interfaces;
+using eAlmacen.Domain.Interfaces;
 using MediatR;
 
 namespace eAlmacen.Application.Products.Queries;
